@@ -1,1 +1,322 @@
+可以，請把下面整份貼到：
+
+`study/2026-07-05.html`
+
+然後按 **Commit changes**。
+
+```html
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>第001冊｜2026/07/05 全球網路共修圖解筆記</title>
+
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:"Microsoft JhengHei","Noto Sans TC",sans-serif;
+  background:#f7f3ea;
+  color:#3b3028;
+}
+header{
+  background:linear-gradient(135deg,#2f5d50,#7fa37b);
+  color:white;
+  text-align:center;
+  padding:50px 20px;
+}
+header h1{margin:0;font-size:34px}
+header p{font-size:18px;line-height:1.8}
+nav{
+  position:sticky;
+  top:0;
+  background:#fffdf8;
+  border-bottom:1px solid #ddd2c3;
+  padding:12px;
+  text-align:center;
+  z-index:10;
+}
+nav button{
+  margin:4px;
+  padding:9px 15px;
+  border:0;
+  border-radius:999px;
+  background:#e7efe3;
+  color:#2f5d50;
+  font-weight:bold;
+  cursor:pointer;
+}
+nav button.active{background:#2f5d50;color:white}
+main{max-width:980px;margin:0 auto;padding:28px 16px}
+.page{
+  display:none;
+  background:white;
+  border-radius:26px;
+  padding:32px;
+  box-shadow:0 10px 28px rgba(0,0,0,.08);
+  min-height:70vh;
+}
+.page.active{display:block}
+.label{
+  display:inline-block;
+  background:#edf5e9;
+  color:#2f5d50;
+  padding:8px 15px;
+  border-radius:999px;
+  font-weight:bold;
+  margin-bottom:15px;
+}
+h2{color:#2f5d50;font-size:30px;margin:8px 0 18px}
+.imgbox{
+  height:280px;
+  border:3px dashed #c8d8c1;
+  border-radius:22px;
+  background:#fafdf8;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#888;
+  font-size:20px;
+  margin:24px 0;
+  text-align:center;
+  padding:20px;
+}
+.quote{
+  background:#f4f8f1;
+  border-left:7px solid #6b8f71;
+  padding:18px 20px;
+  border-radius:16px;
+  font-size:21px;
+  font-weight:bold;
+  line-height:1.8;
+}
+.section{
+  margin-top:22px;
+  padding:20px;
+  border-radius:18px;
+  background:#fff8ec;
+  line-height:1.9;
+  font-size:18px;
+}
+.section h3{margin-top:0;color:#7a5c2e}
+.controls{
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  margin-top:28px;
+}
+.controls button,.home{
+  padding:13px 26px;
+  border:0;
+  border-radius:999px;
+  background:#2f5d50;
+  color:white;
+  font-weight:bold;
+  cursor:pointer;
+  text-decoration:none;
+}
+.controls button:disabled{background:#c8c8c8}
+footer{text-align:center;padding:35px;color:#777}
+@media(max-width:700px){
+  header h1{font-size:26px}
+  .page{padding:22px}
+  h2{font-size:25px}
+  .imgbox{height:220px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>📖 第001冊｜2026/07/05 全球網路共修圖解筆記</h1>
+  <p>主題：反求諸己・天地不會錯・時間可以證明</p>
+</header>
+
+<nav id="nav"></nav>
+
+<main>
+
+<section class="page active">
+  <span class="label">封面</span>
+  <h2>今日核心：事在人為，就是選邊站</h2>
+  <div class="imgbox">封面漫畫預留區</div>
+  <div class="quote">「事在人為，就是選邊站。」</div>
+  <div class="section">
+    <h3>本冊導讀</h3>
+    今天整堂共修，導師透過許多故事，提醒大家：人生不是只看當下，而是每一個起心動念、每一個選擇，都在累積未來的方向。
+  </div>
+</section>
+
+<section class="page">
+  <span class="label">Scene 1</span>
+  <h2>釣魚的人與狗：情緒的代價</h2>
+  <div class="imgbox">釣魚人釣不到魚，把狗丟下水，最後自己跳下去救的漫畫</div>
+  <div class="quote">「不要把你不好過的時候，把你旁邊的人事物拿進去陪葬。」</div>
+  <div class="section">
+    <h3>白話重點</h3>
+    情緒發洩一分鐘，代價可能是一整天。真正的修行，是在情緒升起時，先停下來，不讓旁邊的人跟著受傷。
+  </div>
+</section>
+
+<section class="page">
+  <span class="label">Scene 2</span>
+  <h2>反求諸己</h2>
+  <div class="imgbox">一個人照鏡子，從指責別人轉為反省自己的漫畫</div>
+  <div class="quote">「人世間所有的事情，要反求諸己。」</div>
+  <div class="section">
+    <h3>白話重點</h3>
+    遇到不順，不是第一時間怪別人，而是先看自己的心、自己的反應、自己的選擇。這是今天整堂課最重要的起點。
+  </div>
+</section>
+
+<section class="page">
+  <span class="label">Scene 3</span>
+  <h2>人生有限，福報要珍惜</h2>
+  <div class="imgbox">人生舞台、時鐘、夕陽與高爾夫球場的生活反思漫畫</div>
+  <div class="quote">「不管你有錢沒錢，人生總是要離開這個舞台。」</div>
+  <div class="section">
+    <h3>白話重點</h3>
+    擁有福報、資源與成就時，更要珍惜羽毛，把時間用在更有價值的事情上，而不是因一時欲望讓人生偏離正道。
+  </div>
+</section>
+
+<section class="page">
+  <span class="label">Scene 4</span>
+  <h2>善惡就在一念之間</h2>
+  <div class="imgbox">一個人站在善與惡的十字路口，中間寫著「選邊站」</div>
+  <div class="quote">「人，本性亦善亦惡。」</div>
+  <div class="section">
+    <h3>白話重點</h3>
+    善種子與惡種子都可能被培養。真正的修行，就是在每個當下，選擇讓善的力量長大。
+  </div>
+</section>
+
+<section class="page">
+  <span class="label">Scene 5</span>
+  <h2>天地不會錯</h2>
+  <div class="imgbox">A 今天富有、B 今天困難，時間拉長後人生變化的漫畫</div>
+  <div class="quote">「天地不會錯。」</div>
+  <div class="section">
+    <h3>白話重點</h3>
+    我們看到的常常只是人生的一個截面。今天看似不公平，不代表整體因果錯了。天地看的不是眼前，而是完整的時間線。
+  </div>
+</section>
+
+<section class="page">
+  <span class="label">Scene 6</span>
+  <h2>時間可以證明</h2>
+  <div class="imgbox">沙漏、時間線、十年後回頭看的漫畫</div>
+  <div class="quote">「真的假不了，假的真不了。」</div>
+  <div class="section">
+    <h3>白話重點</h3>
+    有些答案不是當下看得懂，而是時間會慢慢證明。不要急著評判天地，也不要急著下結論。
+  </div>
+</section>
+
+<section class="page">
+  <span class="label">Scene 7</span>
+  <h2>花生醬與天地公式</h2>
+  <div class="imgbox">無糖花生醬、蘋果、睡得安穩的人物漫畫</div>
+  <div class="quote">「吃得飽，不如吃得巧。」</div>
+  <div class="section">
+    <h3>白話重點</h3>
+    導師分享睡前無糖純花生醬的小撇步，也提醒大家：方法只是表面，真正的效果仍與福分、狀態與選擇有關。
+  </div>
+</section>
+
+<section class="page">
+  <span class="label">Scene 8</span>
+  <h2>學員提問：如何確保來生不走偏？</h2>
+  <div class="imgbox">學員提問，導師用整堂課回答「選邊站」的漫畫</div>
+  <div class="quote">「一切事在人為，就是選邊站。」</div>
+  <div class="section">
+    <h3>白話重點</h3>
+    前世福報不代表今生一定不會走偏。真正重要的是今天每一個選擇，都在決定未來的方向。
+  </div>
+</section>
+
+<section class="page">
+  <span class="label">Scene 9</span>
+  <h2>AI 對話啟發</h2>
+  <div class="imgbox">浩婷與 AI 對話，旁邊出現「人生截面」與「時間線」</div>
+  <div class="quote">「你今天看到的，只是人生的一個截面。」</div>
+  <div class="section">
+    <h3>白話重點</h3>
+    當我們覺得「為什麼壞人還過得很好」，其實是因為我們只看見現在，沒有看見完整的因果與時間。
+  </div>
+</section>
+
+<section class="page">
+  <span class="label">Scene 10</span>
+  <h2>浩婷的體悟</h2>
+  <div class="imgbox">浩婷寫筆記、整理逐字稿、把內容變成圖解的漫畫</div>
+  <div class="quote">「一堂課的價值，不在於聽了多少，而在於它是否改變了一個選擇。」</div>
+  <div class="section">
+    <h3>我的體悟</h3>
+    如果因為今天的一句話，讓自己在關鍵時刻選擇了正確方向，那這堂課的價值，真的不是金錢可以衡量。
+  </div>
+</section>
+
+<section class="page">
+  <span class="label">總結</span>
+  <h2>今日行動提醒</h2>
+  <div class="imgbox">一個人在情緒升起時停一秒，選擇善與智慧的漫畫</div>
+  <div class="quote">「修行最難的，不是分辨善惡，而是在情緒升起的那幾秒鐘，還能記得自己真正想成為什麼樣的人。」</div>
+  <div class="section">
+    <h3>今日練習</h3>
+    遇到情緒時，先停一秒。不要急著回嘴、不要急著評斷、不要急著讓情緒找出口。那一秒，就是選邊站。
+  </div>
+</section>
+
+<div class="controls">
+  <button id="prevBtn" onclick="prevPage()">← 上一頁</button>
+  <a class="home" href="../index.html">回首頁</a>
+  <button id="nextBtn" onclick="nextPage()">下一頁 →</button>
+</div>
+
+</main>
+
+<footer>
+全球網路共修圖解圖書館｜第001冊
+</footer>
+
+<script>
+const pages = document.querySelectorAll('.page');
+const nav = document.getElementById('nav');
+let current = 0;
+
+pages.forEach((page, i) => {
+  const btn = document.createElement('button');
+  btn.textContent = i === 0 ? '封面' : i === pages.length - 1 ? '總結' : 'Scene ' + i;
+  btn.onclick = () => showPage(i);
+  nav.appendChild(btn);
+});
+
+function showPage(i){
+  pages[current].classList.remove('active');
+  nav.children[current].classList.remove('active');
+  current = i;
+  pages[current].classList.add('active');
+  nav.children[current].classList.add('active');
+  document.getElementById('prevBtn').disabled = current === 0;
+  document.getElementById('nextBtn').disabled = current === pages.length - 1;
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function nextPage(){
+  if(current < pages.length - 1) showPage(current + 1);
+}
+
+function prevPage(){
+  if(current > 0) showPage(current - 1);
+}
+
+showPage(0);
+</script>
+
+</body>
+</html>
+```
 
