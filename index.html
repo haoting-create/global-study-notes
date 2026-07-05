@@ -3,164 +3,366 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>全球網路共修圖解筆記</title>
 
 <style>
-*{box-sizing:border-box}
+
+*{
+box-sizing:border-box;
+}
+
 body{
-  margin:0;
-  font-family:"Microsoft JhengHei","Noto Sans TC",sans-serif;
-  background:#f8f3e8;
-  color:#3b3028;
+margin:0;
+font-family:"Microsoft JhengHei","Noto Sans TC",sans-serif;
+background:#f8f3e8;
+color:#3b3028;
 }
+
+/* ===== Banner ===== */
+
 .hero{
-  max-width:1400px;
-  margin:0 auto;
+max-width:1400px;
+margin:auto;
 }
+
 .hero img{
-  width:100%;
-  display:block;
+width:100%;
+display:block;
 }
+
+/* ===== 內容 ===== */
+
 .container{
-  max-width:1100px;
-  margin:auto;
-  padding:38px 20px;
+max-width:1100px;
+margin:auto;
+padding:40px 20px;
 }
+
 .section-title{
-  font-size:28px;
-  color:#2f5d50;
-  margin:20px 0;
+font-size:30px;
+color:#2f5d50;
+margin:25px 0;
 }
+
+/* ===== 書卡 ===== */
+
 .book-card{
-  background:white;
-  border-radius:24px;
-  padding:28px;
-  display:grid;
-  grid-template-columns:220px 1fr;
-  gap:28px;
-  box-shadow:0 10px 28px rgba(0,0,0,.08);
-  align-items:center;
+
+background:white;
+
+border-radius:24px;
+
+padding:30px;
+
+display:grid;
+
+grid-template-columns:220px 1fr;
+
+gap:30px;
+
+align-items:center;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
 }
+
+/* 左側 */
+
 .book-cover{
-  background:#f2eadc;
-  border-radius:18px;
-  padding:26px 18px;
-  text-align:center;
-  box-shadow:inset 0 0 0 2px #e1d4bf;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
 }
-.book-cover h3{
-  margin:0;
-  font-size:24px;
-  color:#2f5d50;
+
+.book-cover img{
+
+width:170px;
+
+border-radius:16px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.18);
+
+transition:.35s;
+
 }
+
+.book-cover img:hover{
+
+transform:translateY(-5px) scale(1.03);
+
+}
+
+/* 右側 */
+
 .book-info h2{
-  margin:0 0 12px;
-  font-size:30px;
-  color:#2f5d50;
+
+margin:0;
+
+font-size:42px;
+
+color:#2f5d50;
+
 }
+
+.book-info p{
+
+font-size:20px;
+
+line-height:1.8;
+
+margin:18px 0;
+
+}
+
+/* tag */
+
+.tags{
+
+margin-top:18px;
+
+}
+
 .tags span{
-  display:inline-block;
-  background:#e7efe3;
-  color:#2f5d50;
-  padding:8px 14px;
-  border-radius:999px;
-  margin:5px 5px 5px 0;
-  font-weight:bold;
+
+display:inline-block;
+
+background:#e7efe3;
+
+padding:9px 16px;
+
+border-radius:999px;
+
+margin:6px;
+
+font-weight:bold;
+
+color:#2f5d50;
+
 }
+
+/* button */
+
 .button{
-  display:inline-block;
-  margin-top:20px;
-  background:#2f5d50;
-  color:white;
-  padding:13px 30px;
-  border-radius:999px;
-  text-decoration:none;
-  font-weight:bold;
+
+display:inline-block;
+
+margin-top:25px;
+
+background:#2f5d50;
+
+color:white;
+
+padding:15px 34px;
+
+border-radius:999px;
+
+text-decoration:none;
+
+font-size:18px;
+
+font-weight:bold;
+
+transition:.3s;
+
 }
+
+.button:hover{
+
+background:#3f7564;
+
+transform:translateY(-2px);
+
+}
+
+/* future */
+
 .future-grid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:22px;
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:25px;
+
 }
+
 .future-card{
-  background:white;
-  border-radius:22px;
-  padding:35px 20px;
-  text-align:center;
-  color:#8a7b68;
-  box-shadow:0 8px 20px rgba(0,0,0,.06);
+
+background:white;
+
+border-radius:20px;
+
+padding:40px 20px;
+
+text-align:center;
+
+box-shadow:0 8px 20px rgba(0,0,0,.06);
+
 }
+
 .future-card h3{
-  color:#2f5d50;
-  font-size:24px;
+
+color:#2f5d50;
+
+font-size:28px;
+
+margin-bottom:10px;
+
 }
+
+/* footer */
+
 footer{
-  text-align:center;
-  padding:35px;
-  color:#7b6f60;
+
+padding:35px;
+
+text-align:center;
+
+color:#777;
+
 }
-@media(max-width:760px){
-  .book-card{
-    grid-template-columns:1fr;
-  }
-  .future-grid{
-    grid-template-columns:1fr;
-  }
+
+/* 手機 */
+
+@media(max-width:768px){
+
+.book-card{
+
+grid-template-columns:1fr;
+
+text-align:center;
+
 }
+
+.book-info h2{
+
+font-size:32px;
+
+}
+
+.future-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
 </style>
+
 </head>
 
 <body>
 
+<!-- Banner -->
+
 <div class="hero">
-  <img src="images/home-banner.png" alt="全球網路共修圖解筆記首頁">
+
+<img src="images/home-banner.png" alt="全球網路共修圖解筆記">
+
 </div>
+
+<!-- Content -->
 
 <div class="container">
 
-  <h2 class="section-title">📚 最新出版</h2>
+<h2 class="section-title">
 
-  <div class="book-card">
-    <div class="book-cover">
-      <h3>第001冊</h3>
-      <p>2026/07/05</p>
-      <p>反求諸己<br>天地不會錯<br>時間可以證明</p>
-    </div>
+📚 最新出版
 
-    <div class="book-info">
-      <h2>2026/07/05 全球網路共修</h2>
-      <p>用十張圖解漫畫，整理本次共修的重要觀念與生活提醒。</p>
+</h2>
 
-      <div class="tags">
-        <span>反求諸己</span>
-        <span>天地不會錯</span>
-        <span>時間可以證明</span>
-        <span>選邊站</span>
-        <span>今日學習單</span>
-      </div>
+<div class="book-card">
 
-      <a class="button" href="study/2026-07-05.html">📖 開始閱讀第一冊</a>
-    </div>
-  </div>
+<div class="book-cover">
 
-  <h2 class="section-title">📅 即將出版</h2>
+<img src="images/2026-07-05/001-cover-mini.png" alt="第001冊">
 
-  <div class="future-grid">
-    <div class="future-card">
-      <h3>第002冊</h3>
-      <p>敬請期待</p>
-    </div>
+</div>
 
-    <div class="future-card">
-      <h3>第003冊</h3>
-      <p>敬請期待</p>
-    </div>
-  </div>
+<div class="book-info">
+
+<h2>
+
+2026 / 07 / 05 全球網路共修
+
+</h2>
+
+<p>
+
+用十張漫畫圖解，
+
+整理本堂全球網路共修的重要觀念，
+
+搭配導師金句、白話重點與學習單，
+
+讓每一次複習都更快速、更深入。
+
+</p>
+
+<div class="tags">
+
+<span>反求諸己</span>
+
+<span>天地不會錯</span>
+
+<span>時間可以證明</span>
+
+<span>選邊站</span>
+
+<span>今日學習單</span>
+
+</div>
+
+<a class="button"
+
+href="study/2026-07-05.html">
+
+📖 開始閱讀第一冊
+
+</a>
+
+</div>
+
+</div>
+
+<h2 class="section-title">
+
+📅 即將出版
+
+</h2>
+
+<div class="future-grid">
+
+<div class="future-card">
+
+<h3>第002冊</h3>
+
+<p>敬請期待</p>
+
+</div>
+
+<div class="future-card">
+
+<h3>第003冊</h3>
+
+<p>敬請期待</p>
+
+</div>
+
+</div>
 
 </div>
 
 <footer>
-  © 2026 全球網路共修圖解筆記｜持續更新中
+
+© 2026 全球網路共修圖解圖書館｜持續更新中
+
 </footer>
 
 </body>
