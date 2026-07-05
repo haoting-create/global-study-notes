@@ -17,7 +17,7 @@ header{
   background:linear-gradient(135deg,#2f5d50,#7fa37b);
   color:white;
   text-align:center;
-  padding:36px 18px;
+  padding:34px 18px;
 }
 header h1{margin:0;font-size:30px}
 header p{font-size:17px;line-height:1.7}
@@ -29,6 +29,8 @@ nav{
   padding:10px;
   text-align:center;
   z-index:10;
+  overflow-x:auto;
+  white-space:nowrap;
 }
 nav button{
   margin:4px;
@@ -52,12 +54,19 @@ main{max-width:980px;margin:0 auto;padding:22px 12px}
   border-radius:18px;
   box-shadow:0 10px 28px rgba(0,0,0,.12);
   background:white;
+  cursor:zoom-in;
+}
+.page-count{
+  text-align:center;
+  margin:12px 0 6px;
+  color:#6b5f53;
+  font-weight:bold;
 }
 .controls{
   display:flex;
   justify-content:space-between;
   gap:12px;
-  margin:24px auto 10px;
+  margin:22px auto 10px;
   max-width:900px;
 }
 .controls button,.home{
@@ -72,10 +81,36 @@ main{max-width:980px;margin:0 auto;padding:22px 12px}
 }
 .controls button:disabled{background:#c8c8c8}
 footer{text-align:center;padding:28px;color:#777}
+
+.lightbox{
+  display:none;
+  position:fixed;
+  z-index:9999;
+  inset:0;
+  background:rgba(0,0,0,.9);
+  align-items:center;
+  justify-content:center;
+  padding:18px;
+}
+.lightbox img{
+  max-width:96vw;
+  max-height:94vh;
+  border-radius:12px;
+  box-shadow:0 10px 40px rgba(0,0,0,.55);
+}
+.close{
+  position:absolute;
+  top:16px;
+  right:26px;
+  color:white;
+  font-size:42px;
+  cursor:pointer;
+  line-height:1;
+}
+
 @media(max-width:700px){
   header h1{font-size:23px}
   header p{font-size:15px}
-  nav{overflow-x:auto;white-space:nowrap}
   .controls{flex-direction:column}
   .controls button,.home{text-align:center;width:100%}
 }
@@ -106,12 +141,34 @@ footer{text-align:center;padding:28px;color:#777}
 </section>
 
 <section class="page">
-  <img class="comic" src="../images/2026-07-05/04-時間可以證明.png" alt="時間可以證明">
+  <img class="comic" src="../images/2026-07-05/04-天地不會錯.png" alt="天地不會錯">
 </section>
 
 <section class="page">
   <img class="comic" src="../images/2026-07-05/05-順境更要守住初心.png" alt="順境更要守住初心">
 </section>
+
+<section class="page">
+  <img class="comic" src="../images/2026-07-05/06-時間可以證明.png" alt="時間可以證明">
+</section>
+
+<section class="page">
+  <img class="comic" src="../images/2026-07-05/07-花生醬的小智慧.png" alt="花生醬的小智慧">
+</section>
+
+<section class="page">
+  <img class="comic" src="../images/2026-07-05/08-選邊站.png" alt="選邊站">
+</section>
+
+<section class="page">
+  <img class="comic" src="../images/2026-07-05/09-學員提問.png" alt="學員提問">
+</section>
+
+<section class="page">
+  <img class="comic" src="../images/2026-07-05/10-今日學習單.png" alt="今日學習單">
+</section>
+
+<div class="page-count" id="pageCount"></div>
 
 <div class="controls">
   <button id="prevBtn" onclick="prevPage()">← 上一頁</button>
@@ -121,6 +178,11 @@ footer{text-align:center;padding:28px;color:#777}
 
 </main>
 
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+  <span class="close">×</span>
+  <img id="lightboxImg" src="" alt="放大圖片">
+</div>
+
 <footer>
 全球網路共修圖解圖書館｜第001冊
 </footer>
@@ -128,9 +190,21 @@ footer{text-align:center;padding:28px;color:#777}
 <script>
 const pages = document.querySelectorAll('.page');
 const nav = document.getElementById('nav');
+const pageCount = document.getElementById('pageCount');
 let current = 0;
 
-const labels = ['封面','釣魚人與狗','反求諸己','時間可以證明','順境守初心'];
+const labels = [
+  '封面',
+  '釣魚人與狗',
+  '反求諸己',
+  '天地不會錯',
+  '順境守初心',
+  '時間可證明',
+  '花生醬智慧',
+  '選邊站',
+  '學員提問',
+  '學習單'
+];
 
 pages.forEach((page, i) => {
   const btn = document.createElement('button');
@@ -147,6 +221,7 @@ function showPage(i){
   nav.children[current].classList.add('active');
   document.getElementById('prevBtn').disabled = current === 0;
   document.getElementById('nextBtn').disabled = current === pages.length - 1;
+  pageCount.textContent = `第 ${current + 1} / ${pages.length} 頁`;
   window.scrollTo({top:0,behavior:'smooth'});
 }
 
@@ -157,6 +232,23 @@ function nextPage(){
 function prevPage(){
   if(current > 0) showPage(current - 1);
 }
+
+document.querySelectorAll('.comic').forEach(img => {
+  img.addEventListener('click', () => {
+    document.getElementById('lightboxImg').src = img.src;
+    document.getElementById('lightbox').style.display = 'flex';
+  });
+});
+
+function closeLightbox(){
+  document.getElementById('lightbox').style.display = 'none';
+}
+
+document.addEventListener('keydown', function(e){
+  if(e.key === 'Escape') closeLightbox();
+  if(e.key === 'ArrowRight') nextPage();
+  if(e.key === 'ArrowLeft') prevPage();
+});
 
 showPage(0);
 </script>
